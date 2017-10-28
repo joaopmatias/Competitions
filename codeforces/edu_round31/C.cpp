@@ -42,7 +42,11 @@ int main()
     {
         ans += ((ll) cycles[i]) * ((ll)cycles[i]);
     }
-    if(ncycles > 1) ans += ((ll) (cycles[ncycles - 1] + cycles[ncycles - 2])) * ((ll) (cycles[ncycles - 1] + cycles[ncycles - 2]));
+    if(ncycles > 1) 
+    { ans +=
+        ((ll)(cycles[ncycles - 1] + cycles[ncycles - 2])) * 
+        ((ll) (cycles[ncycles - 1] + cycles[ncycles - 2]));
+    }
     else ans += ((ll)cycles[0]) * ((ll) cycles[0]);
 
     cout << ans;
