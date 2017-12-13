@@ -58,6 +58,38 @@ node * rotateL(node * root){
     return z;
 }
 
+
+node * balanceup(node * up){
+    //make sure argument is not nullptr
+    //assumes that the children of up are balanced
+    //and parents are off by at most 2
+    node * u, * t;
+    u = up;
+    t = up;
+    while(t != nullptr){
+        u = t;
+        if(getbalance(u) > 1){
+            if(getbalance(u -> left) >= 0) u = rotateR(u);
+            else{//left right
+                u -> left = rotateL(u -> left);
+                u = rotateR(u);
+            }
+        }
+        else if(getbalance(u) < -1){
+            if(getbalance(u -> right) <= 0) u = rotateL(u);
+            else{//right left
+                u -> right = rotateR(u -> right);
+                u = rotateL(u);
+            }
+        }
+        else u -> height = max(height(u->right), height(u-> left)) + 1;
+        t = t -> parent;
+    }
+    return u;
+}
+
+
+
 node * insertin(node * root, int value){
     node * noob = newnode(value);
     if(root == nullptr) return noob;
@@ -70,36 +102,55 @@ node * insertin(node * root, int value){
     if(value < t -> value) t -> left = noob;
     else t-> right = noob;
     noob -> parent = t;
-    u = t;
-    t = t -> parent;
-    while(t != nullptr){
-        u = t;
-        if(getbalance(u) > 1){
-            if(value < u -> value) u = rotateR(u);
-            else{//left right
-                u -> left = rotateL(u -> left);
-                u = rotateR(u);
-            }
-        }
-        if(getbalance(u) < -1){
-            if(value >= u -> value) u = rotateL(u);
-            else{//right left
-                u -> right = rotateR(u -> right);
-                u = rotateL(u);
-            }
-        }
-        else u -> height = max(height(u->right), height(u-> left)) + 1;
-        t = t -> parent;
-    }
+    u = balanceup(t); 
     return u;
 }
 
-//YOU ARE HERE
 
-//give smallest term too
-node * erasin(node * root, int value){
+node * extremeleft(node * root){
+    node * t = root;
+    while(t -> left != nullptr) t = t -> left; 
+    return t;
+}
 
-    return root;
+
+int erasin(node * root, int value){
+    node * u, * v = root, * replace, * fixbalance, *t;
+    if(root == nullptr) return 0;
+    while(v != nullptr) {
+        u = v;
+        if(value < v -> value) v -> left;
+        else if(value > v -> value) v -> right;
+        else v = nullptr;
+    }
+    if(value != u -> value) return 0; 
+    if(u -> right == nullptr){
+        replace = u -> left;
+        fixbalance = replace
+    }
+    else if(u -> right -> left == nullptr){
+        replace = u -> right;
+        replace -> left = u -> left;
+        fixbalance = replace;
+    }
+    else {
+        replace = extremeleft(u -> right);
+        fixbalance  = replace -> parent;
+        fixbalance -> left = nullptr;
+        replace -> left = u -> left;
+        replace -> right = u -> right;
+    }
+    if(replace -> right != nullptr) replace -> right -> parent = replace;
+    if(replace -> left != nullptr) replace -> left -> parent = replace;
+    replace -> parent = u -> parent;
+    if(replace -> parent != nullptr){
+        if(value < replace -> parent -> value) replace -> parent -> left = replace;
+        if(value > replace -> parent -> value) replace -> parent -> right = replace;
+    }
+    //above is just the beginning
+    t = balanceup(fixbalance);
+    root = t;
+    return 1;
 }
 
 
