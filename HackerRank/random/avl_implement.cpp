@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+
 using namespace std;
 
 struct node {
@@ -12,7 +13,7 @@ struct node {
     node * parent;
     node * left;
     node * right;
-}
+};
 
 int height(node * root){
     if(root == nullptr) return 0;
@@ -126,7 +127,7 @@ int erasin(node * root, int value){
     if(value != u -> value) return 0; 
     if(u -> right == nullptr){
         replace = u -> left;
-        fixbalance = replace
+        fixbalance = replace;
     }
     else if(u -> right -> left == nullptr){
         replace = u -> right;
@@ -155,8 +156,6 @@ int erasin(node * root, int value){
 
 
 int main(){
-
-
-
-
+    cout << "oi" << endl;
+    return 0;
 }
