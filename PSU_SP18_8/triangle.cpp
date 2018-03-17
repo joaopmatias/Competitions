@@ -21,7 +21,7 @@ void matmul(int mata[][20], int matb[][20], int dim){
 		for(j = 0; j < dim; j++){
 			line[j] = 0;
 			for(k = 0; k < dim; k++){
-				line[j] += mata[i][k]*matb[k][j];
+				line[j] += mata[i][k] * matb[k][j];
 			}
 		}
 		for(j = 0; j < dim; j++){
