@@ -49,7 +49,7 @@ public class disorderly_escape {
 			}
 			successor(gamma);
 		}
-		return ans.setScale(0, BigDecimal.ROUND_HALF_UP).toString();
+		return ans.setScale(6, BigDecimal.ROUND_HALF_UP).toString();
 	}
 
 	public static void successor(int[] eg){

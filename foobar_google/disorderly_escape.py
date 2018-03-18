@@ -1,5 +1,5 @@
 from decimal import *
-getcontext().prec = 10
+getcontext().prec = 50
 
 def gcd(m,n):
     i = min(m,n)
@@ -61,16 +61,20 @@ def answer(w, h, s):
     gamma[0] = w
     delta = [0]*h
     delta[0] = h
-    ans = 0.00000000
+    ans = Decimal(0)
     while True:
         de = denominator(gamma, delta)
         sumsum = sumgcd(gamma, delta)
-        ans += (s**sumsum + 0.0000000)/(de + 0.0000000)
+        ans = ans + Decimal(s**sumsum)/(Decimal(de))
         if gamma[w - 1] == 1:
             if delta[h - 1] == 1:
                 break
             else:
                 successor(delta)
         successor(gamma)
-    return int(round(ans))
-    
+    print ans
+    return ans
+ 
+grab = raw_input().split()
+w, h, s = map(int, grab)
+print(int(answer(w,h,s)))
