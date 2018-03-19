@@ -1,0 +1,350 @@
+
+AAAAAAAAAAAAAAAAAAA
+
+Problem A
+Animal Cracker Monday
+
+On Animal Cracker Monday (ACM for short), you are given a number of animal crackers, n. Each animal cracker is labeled with a number ranging from 1 to n. You must eat at least one animal cracker, but you cannot eat any two animal crackers that share a digit in their numeric representation. How many different ways can some set of animal crackers be eaten such that the number associated with any two animal crackers does not have any individual digits in common?
+
+For example, if n = 12
+, there are 14 animal crackers marked 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, and 12 respectively. Crackers 3, 5, and 9 are allowed to be eaten together. Animal crackers 2, 7, 8, and 11 can also be eaten together. However, crackers 2, 7, and 12 cannot be eaten together because crackers 2 and 12 have the digit 2
+
+in common.
+
+Note: the ordering of animal crackers in each set is inconsequential. Therefore, eating animal crackers (7,8,9)
+is the same as eating animal crackers (9,8,7)
+
+.
+Input
+
+The first input line is a number N
+(0≤N≤20) which corresponds to the number of test cases. Each of the following N lines is a single test case, containing an integer I (1≤I≤109). So, if N = 11, there are 11 lines following the first line, each with a single test case I
+
+.
+Output
+
+For each test case, output the test case number associated with that test case and follow it with the number of sets of animal crackers modulo 1000000007
+.
+Sample Input 1 	Sample Output 1
+
+4
+7
+8
+9
+10
+
+	
+
+Case 1: 127
+Case 2: 255
+Case 3: 511
+Case 4: 767
+
+Sample Input 2 	Sample Output 2
+
+3
+679
+5019
+2609
+
+	
+
+Case 1: 158286063
+Case 2: 640658343
+Case 3: 397337905
+
+Sample Input 3 	Sample Output 3
+
+4
+174
+956
+4072
+8993
+
+	
+
+Case 1: 4911233
+Case 2: 561134599
+Case 3: 283097892
+Case 4: 201022736
+
+
+BBBBBBBBBBBBBBBBBBBBBBBBBB
+
+
+
+Problem B
+Bag Deposit
+
+Tim manages a bag deposit counter. In the morning, people would stop by at his counter to deposit their bags before they go on to do their daily business. They will then come back to collect the bags in the evening each at different times. When people deposit their bags, they will be given a unique id tag for the bag and they need to indicate the time that they will be back to collect their bags. His business has been doing really well but there is one major problem. There are more than 100
+
+bags each day and Tim can’t just be looking for the bag in the large piles of bags. To optimize his operation he will need to find a way to stack the bags such that he can place them on the stack as they come in and pick the bag from the top of the stack whenever people come back to collect the bags, instead of trying to dig under the pile. And due to limited space, he will need to minimize the number of stacks. There is no limit on how high the stack can be and all the customers will have deposited their bags before anyone comes back to collect their bag.
+Input
+
+Input begins with a line containing an integer n
+representing the number of bags. The next n lines each represents one bag ordered chronologically (so the first bag checked in precedes the second bag checked in, etc.). Each line contains a 4-digit unique bag id followed by the order r, (0≤r<10000) in which the bag will be collected. For example 2342 5 represents bag with id 2342 and is the sixth bag that will be collected, where 0
+
+is the first bag to be collected.
+Output
+
+Output the minimal number of stacks needed so that as the bags are collected, they will only be taken from the top of the stack.
+
+
+
+Sample Input 1 	Sample Output 1
+
+5
+0001 4
+0002 3
+0003 5
+0004 1
+0005 2
+
+	
+
+2
+
+Sample Input 2 	Sample Output 2
+
+10
+0000 1
+0001 6
+0002 8
+0003 2
+0004 0
+0005 5
+0006 3
+0007 7
+0008 9
+0009 4
+
+	
+
+5
+
+
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+
+Problem C
+Adventurous Creamery Maniacs
+
+Many people enjoy ice cream, especially on a hot day. But some people have a passion for the frozen treat that is unrivaled by any other food-lovers. These people are the members of the Adventurous Creamery Maniacs (ACM), and you have been hired to help cater their weekly meeting. Now, the members of the ACM are quite picky about what flavors of ice cream they want, so they always take ice cream orders in advance. Each member of the club has filled out an order card denoting how much ice cream they want out of three flavors: Chocolate, Vanilla, and Strawberry.
+
+As you are tabulating the survey of the ACM members, you begin to realize the sheer quantity of ice cream you are going to need to buy. Even though the survey was limited to basic flavors that do not have a premium cost, you still are obliged to buy the highest quality ice cream and are concerned about overspending. Because the ACM loves ice cream, they would hate to see any of it go to waste. Therefore, one of the requirements they make of all of their caterers is that they buy the exact quantities of ice cream indicated by their survey (you cannot buy extra, even if it is cheaper).
+
+The ACM has helped you acquire some special discounts with various ice cream suppliers (the ACM is one of their best customers, after all), but this means that there is a possibility that just ordering the largest containers of ice cream may not be the most economical for some flavors of ice cream. Additionally, the ice cream suppliers offer mixed packages of ice cream containing equal amounts of all three of the flavors that you want to buy. These mixed packages are usually sold in different quantities and prices than their single-flavored counterparts, and you realize that buying these multi-flavored packages may be the only way for you to get the lowest price of the exact quantity that you need. Can you figure out the best way to satisfy the ACM’s order?
+Input
+
+The first line of input contains three integers: n m p
+, the target amount of chocolate, vanilla, and strawberry ice cream you need to buy (1≤n,m,p≤103). The next line of input includes four integers: V C S A, the number of options you have for purchasing Vanilla, Chocolate, Strawberry, and all flavors of ice cream. This will be followed by V (1≤V≤103), C (1≤C≤103), S (1≤S≤103), and A (0≤A≤103) lines each of two integers qc (1≤q,c≤103), corresponding to the quantity of that flavor of ice cream and the cost to buy that quantity of ice cream. For the line corresponding to all flavors of ice cream, the quantity given corresponds to the amount of each flavor in the pack (so a quantity of 3 corresponds to 3
+
+quarts of vanilla, 3 quarts of Chocolate, and 3 quarts of Strawberry in one package).
+
+Note that for a given flavor of ice cream, p and q may not necessarily be unique. You are dealing with multiple ice cream suppliers and they all have different pricing policies.
+Output
+
+Output a single line containing the minimum possible cost to buy the ice cream you want. It is safe to assume that every supplier sells 1
+-quart containers of each individual flavor of ice cream, so a solution will always be possible.
+
+
+Sample Input 1 	Sample Output 1
+
+3 4 5
+1 1 1 0
+1 1
+1 1
+1 1
+
+	
+
+12
+
+Sample Input 2 	Sample Output 2
+
+4 7 9
+2 2 2 1
+1 3
+3 5
+1 3
+2 4
+1 8
+2 10
+1 4
+
+	
+
+51
+
+
+DDDDDDDDDDDDDDDDDDDDDDDD
+
+
+Problem D
+Office Hour Visits
+
+You are taking a very full course load this semester and have to visit your TAs’ office hours. All of them have their office hours at different times during the week! You want to try to visit as many of your TAs as possible given the times that their office hours occur. Luckily all of their office hours are in the same building so it takes you no time to travel from one to another. Of course, you don’t need to sleep, eat or do anything normal humans do because that would ruin the purpose of this problem!
+
+Note: if you choose attend a TA’s office hours, you must attend for the whole time, because you are very behind in the class and you need a LOT of help.
+Input
+
+The first line consists of the number of TAs,N
+(2<N<50,000), that you can visit. Then, the next N lines each consist of the time that the TA’s office hours start, Ts, and the time they end, Te, order (0≤Ts<Te≤10,080
+
+). The times are given as the number of minutes into the week (i.e. 0 would be midnight and 60 would be 1 AM).
+Output
+
+Print out the maximum number of TAs that you can visit this week, given that if you choose to visit a TA, you have to stay for the entire duration of their office hours.
+
+
+Sample Input 1 	Sample Output 1
+
+5
+1 3
+2 5
+3 7
+4 5
+5 8
+
+	
+
+3
+
+
+EEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+
+
+Problem E
+Alien Clown Magnets
+
+Alien Clown Magnets (ACM), Inc., the largest manufacturer of magnets that look like alien clowns in the world, has been financially struggling as their energy costs have sky-rocketed due to the insatiable demand for alien clown magnets. As CEO, you have determined that the best way to reduce these costs significantly is to switch to solar power in all of the manufacturing plants. While it would be nice to install solar panels at every plant, it may be cheaper to connect some plants to other plants with existing solar panels. Your goal is to get the cheapest cost plan to implement so that every plant has access to solar power. As you are working on a tight budget, there is a limited number of solar panels that you can use. A plant can be considered to have access to solar power if either it has solar panels, or if a plant can connect to a plant with solar panels through a connection of wires (i.e a plant can connect directly to a plant with solar panels, or it can connect to another plant that may access a plant with solar panels). You can assume that each plant with solar panels generates enough electricity to power all connected plants, and the electricity can flow both ways through the connections. Note: there can exist multiple direct connections between two plants of different costs, as installing connections through different terrains have different costs.
+Input
+
+The first line consists of the number of test cases, N
+, where N≤5. Each test case begins with four integers P, L, S, R, where P is the number of manufacturing plants (0<P≤10,000) numbered 1 to P, L is the number of possible connections that can created between plants (0≤L≤50,000), S is the cost of installing solar panels at a plant (0<S≤10,000), and R is the maximum number of solar panels available (0<R≤50,000). The next L lines consist of the three integers A, B, C, where A and B are manufacturing plants (0<A,B≤P), and C is the cost of building a connection between A and B (0<C≤10,000
+
+).
+Output
+
+For each test case, output the minimum cost of installing solar panels at plants, and creating connections between plants such that each plant has access to solar power.
+
+
+Sample Input 1 	Sample Output 1
+
+1
+5 4 100 3
+0 1 50
+2 3 120
+0 3 40
+1 2 100
+
+	
+
+390
+
+Sample Input 2 	Sample Output 2
+
+1
+7 5 100 10
+0 2 90
+1 3 120
+0 4 100
+5 6 40
+4 7 30
+
+	
+
+560
+
+
+
+FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+
+Problem F
+Rocks on a Plane
+
+Dr. Andrew Carmen Morgan, the world’s leading expert on African rocks, has traveled to the Angolan Central Museum (ACM) to see the newest collection of rocks that have been discovered. After inspecting them all, he is very interested in researching these rocks more, and after receiving the museum’s permission, has decided to take the rocks back to the United States. After the rock transporter inspects the rocks that Dr. Morgan wants to take back to the US, he informs Dr. Morgan that they will need to put the rocks onto two separate planes as the rocks are too heavy to place on one. Dr. Morgan is interested in devising an algorithm to determine which rocks to put in each plane such that weight of the total weight of the rocks in each plane is as close to equal as possible, and the number of rocks in each plane does not differ by more than 1. You can assume that the rocks weigh between 1
+and 450
+
+pounds, and there are no more than 100 rocks.
+Input
+
+The first line consists of the number of test cases, T
+, where T≤20. Each test case begins with an integer N, the number of rocks (1≤N≤80). The next N lines consist of an integer W, the weight of the corresponding rock (1≤W≤300
+
+).
+Output
+
+For each test case, on the same line, output the total weight of the rocks in each plane, separated with a space, with the lightest weight first, and the heaviest weight second. If they both weight the same weight, it does not matter which one you output first.
+
+
+Sample Input 1 	Sample Output 1
+
+1
+4
+100
+200
+300
+170
+
+	
+
+370 400
+
+
+
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+
+
+Problem G
+Drive Right
+
+Turning left is possibly one of the most dangerous things you can do while driving. According to federal data, 53.1 percent of crossing-path crashes involve left turns, as opposed to only 5.7 percent involving right turns. Many large shipping companies strongly advise their drivers against turning left, especially on well-trafficked roads 1.
+
+You have just been hired as a driver for the Above-average Comic Messengers (ACM), a service dedicated to delivering comic books to customers around town. Knowing the dangers of right turns and wishing to impress your bosses, you would like to show them an alternate shipping route that only uses right turns (denote this the “right route” - ie. a route at which you can only go straight or turn right at any intersections). For the sake of simplicity, you assume that roads are all two-way roads, and you get to work mapping routes. Unfortunately, there are too many maps for you to process all of this by hand, so you decide to write a computer program to help you process the data.
+Input
+
+Each input file will consist of one test cases. The first line of each test case will contain a two integers w
+and h (1≤w,h≤100), the width and height of the map you would like to process. The next h lines contain w
+
+characters each, forming a grid that represents the map. The map will be made of four characters: “A”, “B”, “X”, and “.”. The starting point of your delivery route will be marked with an “A”, while the ending point will be marked with a “B”. All roads will be marked by the character “.”. You can exit A and you can enter B from any direction, provided that there is adjacent road. All cells on the map through which you cannot drive will be marked by the character “X”.
+
+Note: For the purposes of this problem, a“right turn” corresponds to a movement of your car one square in the grid to the right followed by a 90 degree clockwise rotation of your car. You may only turn at an intersection where you can make a right turn and you cannot turn around on a dime.
+Output
+
+For each test case, print a single line containing one integer l
+, the length of the shortest “right route” from A to B. If no right route exists, print -1.
+
+
+Sample Input 1 	Sample Output 1
+
+5 5
+XXXXA
+XXXX.
+XXXX.
+XXXX.
+B....
+
+	
+
+8
+
+Sample Input 2 	Sample Output 2
+
+5 5
+XXXXB
+XXXX.
+XXXX.
+XXXX.
+A....
+
+	
+
+-1
+
+
+
