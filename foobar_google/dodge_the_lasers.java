@@ -66,6 +66,7 @@ public class dodge_the_lasers {
 		BigInteger ans = BigInteger.ZERO;
 		int[] anArray = new int[digits + 2];
 		right_bin(anArray, digits);
+		System.out.println(Arrays.toString(anArray));
 		int i;
 		for(i = 0; i < digits; i++){
 			if(anArray[i] == 1)	ans = ans.add(  gauss_trick( feed_nr, test )  );
