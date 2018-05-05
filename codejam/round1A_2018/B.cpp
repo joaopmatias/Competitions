@@ -53,7 +53,6 @@ void solve(){
 				}
 			}
 		}
-
 		done = 0;
 		for(auto it = robos.begin(); it != robos.end(); it++){
 			done += *it;
@@ -80,11 +79,6 @@ int main()
 	for(q = 0; q < query; q++){
 		cout << "Case #" << q+1 << ": ";
 		solve();
-
-
-
-
-
 
 
 		cout << endl;
