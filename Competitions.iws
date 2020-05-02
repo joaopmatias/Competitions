@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f9dc624-1b70-4ee0-857d-e3e0177a8273" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/codeforces/637_div2/637_kotlin/src/C.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Competitions.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Competitions.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Competitions.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Competitions.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codeforces/637_div2/637_kotlin/637_kotlin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/codeforces/637_div2/637_kotlin/637_kotlin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codeforces/637_div2/637_scala/637_scala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/codeforces/637_div2/637_scala/637_scala.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codeforces/637_div2/C.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/codeforces/637_div2/t" beforeDir="false" afterPath="$PROJECT_DIR$/codeforces/637_div2/t" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1bKFMh5ywIBtwueFjL4p6fiC5ph" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/codeforces/637_div2/637_scala" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.kotlinCompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/codeforces/637_div2/637_kotlin/src" />
+      <recent name="$PROJECT_DIR$/codeforces/637_div2/637_kotlin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Kotlin.CKt (1)">
+    <configuration name="C" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="C" />
+      <module name="637_scala" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="$PROJECT_DIR$/codeforces/637_div2/t" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CKt (1)" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="637_kotlin" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="CKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="637_kotlin2" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Kotlin SDK" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="CKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.C" />
+      <item itemvalue="Kotlin.CKt" />
+      <item itemvalue="Kotlin.CKt (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.CKt (1)" />
+        <item itemvalue="Kotlin.CKt" />
+        <item itemvalue="Application.C" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f9dc624-1b70-4ee0-857d-e3e0177a8273" name="Default Changelist" comment="" />
+      <created>1588372831698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588372831698</updated>
+    </task>
+    <task id="LOCAL-00001" summary="wip">
+      <created>1588374658146</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588374658146</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+  </component>
+</project>
