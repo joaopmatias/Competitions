@@ -63,16 +63,17 @@ int main()
 		gg = now.first;
 		i = now.second;
 		l = v[i][gg];
+		if ((ans != -1) && (l >= ans)) continue;
 
 		if (i != m) {
 			diff = d[i + 1] - d[i];
 			res = gg + diff;
 			if ((res < g) && (v[i + 1][res] == -1)) {
-				q.push_front(make_pair(res, i + 1));
 				v[i + 1][res] = l + diff;
+				q.push_front(make_pair(res, i + 1));
 			} else if ((res == g) && (v[i + 1][0] == -1)) {
-				q.push_back(make_pair(0, i + 1));
 				v[i + 1][0] = l + diff;
+				if (ans == -1) q.push_back(make_pair(0, i + 1));
 			}
 		} else if (ans == -1) {
 			ans = l;
@@ -84,11 +85,11 @@ int main()
 			diff = d[i] - d[i - 1];
 			res = gg + diff;
 			if ((res < g) && (v[i - 1][res] == -1)) {
-				q.push_front(make_pair(res, i - 1));
 				v[i - 1][res] = l + diff;
+				q.push_front(make_pair(res, i - 1));
 			} else if ((res == g) && (v[i - 1][0] == -1)) {
-				q.push_back(make_pair(0, i - 1));
 				v[i - 1][0] = l + diff;
+				if (ans == -1) q.push_back(make_pair(0, i - 1));
 			}
 		}
 	}
